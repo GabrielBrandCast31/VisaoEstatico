@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Obrigado! Seu diagnóstico está a caminho — Visão</title>
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;700&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+</head>
+<body class="font-body">
+  <div class="relative min-h-screen overflow-hidden bg-canvas">
+    <header class="relative border-b border-edge-light/60 bg-canvas/80 backdrop-blur-xl">
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8 flex h-16 items-center justify-between">
+        <a href="index.html" class="flex items-center"><img src="assets/img/logo.png" alt="Visão" class="h-9 w-auto select-none" /></a>
+      </div>
+    </header>
+
+    <main class="relative py-12 sm:py-16">
+      <div class="mx-auto w-full max-w-5xl px-5 sm:px-8">
+        <div id="result-root"></div>
+      </div>
+    </main>
+  </div>
+
+  <div id="cookie-banner" class="hidden fixed inset-x-4 bottom-4 z-50 mx-auto max-w-3xl translate-y-24 opacity-0 transition-all duration-300" role="dialog" aria-live="polite">
+    <div class="flex flex-col gap-4 rounded-2xl border border-edge-light bg-card/95 p-5 shadow-vision-card backdrop-blur sm:flex-row sm:items-center sm:justify-between sm:p-6">
+      <p class="font-body text-sm text-mute sm:text-base">A gente usa cookies para entender o que funciona na página. <a href="politica-privacidade.html" class="text-support hover:text-accent">Política de Privacidade</a>.</p>
+      <div class="flex shrink-0 gap-2">
+        <button data-cookie-reject class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-transparent text-fg hover:bg-card px-4 py-2 text-sm">Recusar</button>
+        <button data-cookie-accept class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-accent text-ink hover:-translate-y-0.5 hover:shadow-glow-yellow shadow-vision-soft px-4 py-2 text-sm">Aceitar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/jspdf@2.5.2/dist/jspdf.umd.min.js"></script>
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/submit.js"></script>
+  <script src="assets/js/pdf.js"></script>
+  <script src="assets/js/obrigado.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

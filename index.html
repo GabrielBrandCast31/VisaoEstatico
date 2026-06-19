@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visão — Clareza para decidir. Estrutura para crescer.</title>
+  <meta name="description" content="Consultoria financeira & contábil humanizada. Organize sua vida financeira com clareza, acolhimento, direção e acompanhamento real." />
+  <meta property="og:title" content="Pega a Visão!" />
+  <meta property="og:description" content="Clareza para decidir. Estrutura para crescer. Consultoria financeira & contábil humanizada." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="apple-touch-icon" href="assets/img/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@400;700&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/tw-config.js"></script>
+</head>
+<body class="font-body">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 border-b border-edge-light/60 bg-canvas/80 backdrop-blur-xl">
+    <div class="mx-auto w-full max-w-6xl px-5 sm:px-8 flex h-16 items-center justify-between">
+      <a href="index.html" class="flex items-center">
+        <img src="assets/img/logo.png" alt="Visão" class="h-9 w-auto select-none" />
+      </a>
+      <nav class="hidden gap-8 text-sm text-mute md:flex">
+        <a href="#pilares" class="transition hover:text-fg">Abordagem</a>
+        <a href="#diferenciais" class="transition hover:text-fg">Diferenciais</a>
+        <a href="#faq" class="transition hover:text-fg">Dúvidas</a>
+      </nav>
+      <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-accent text-ink hover:-translate-y-0.5 hover:shadow-glow-yellow shadow-vision-soft px-4 py-2 text-sm">Diagnóstico grátis</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-canvas pb-28 pt-16 sm:pt-20">
+      <div class="absolute inset-0 bg-gradient-hero opacity-95"></div>
+      <svg viewBox="0 0 600 600" aria-hidden class="pointer-events-none absolute -left-40 -top-40 h-[720px] w-[720px] opacity-70">
+        <defs><radialGradient id="orb-h1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--primary-light)" stop-opacity="0.55"></stop><stop offset="100%" stop-color="var(--primary-light)" stop-opacity="0"></stop></radialGradient></defs>
+        <g fill="none" stroke="var(--primary-light)" stroke-width="0.8" opacity="0.55" transform="rotate(-12 300 300)"><ellipse cx="300" cy="300" rx="280" ry="120"></ellipse><ellipse cx="300" cy="300" rx="220" ry="92" opacity="0.7"></ellipse><ellipse cx="300" cy="300" rx="160" ry="66" opacity="0.5"></ellipse><ellipse cx="300" cy="300" rx="100" ry="42" opacity="0.35"></ellipse></g>
+        <circle cx="300" cy="300" r="220" fill="url(#orb-h1)" opacity="0.45"></circle>
+      </svg>
+      <svg viewBox="0 0 600 600" aria-hidden class="pointer-events-none absolute -bottom-48 -right-40 h-[640px] w-[640px] opacity-50">
+        <defs><radialGradient id="orb-h2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--support)" stop-opacity="0.55"></stop><stop offset="100%" stop-color="var(--support)" stop-opacity="0"></stop></radialGradient></defs>
+        <g fill="none" stroke="var(--support)" stroke-width="0.8" opacity="0.55" transform="rotate(-12 300 300)"><ellipse cx="300" cy="300" rx="280" ry="120"></ellipse><ellipse cx="300" cy="300" rx="220" ry="92" opacity="0.7"></ellipse><ellipse cx="300" cy="300" rx="160" ry="66" opacity="0.5"></ellipse><ellipse cx="300" cy="300" rx="100" ry="42" opacity="0.35"></ellipse></g>
+        <circle cx="300" cy="300" r="220" fill="url(#orb-h2)" opacity="0.45"></circle>
+      </svg>
+      <svg viewBox="0 0 400 200" aria-hidden class="pointer-events-none absolute left-1/2 top-10 h-32 w-[520px] -translate-x-1/2 opacity-40">
+        <path d="M 20 180 Q 200 -40 380 180" fill="none" stroke="var(--accent)" stroke-width="1.2" stroke-linecap="round" opacity="0.7"></path>
+        <path d="M 60 180 Q 200 -10 340 180" fill="none" stroke="var(--accent)" stroke-width="0.8" stroke-linecap="round" opacity="0.45"></path>
+        <path d="M 100 180 Q 200 20 300 180" fill="none" stroke="var(--accent)" stroke-width="0.6" stroke-linecap="round" opacity="0.25"></path>
+      </svg>
+
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8 relative flex flex-col items-center text-center">
+        <p class="mt-4 font-heading text-xs uppercase tracking-[0.32em] text-primary-200">Consultoria Financeira &amp; Contábil Humanizada</p>
+        <h1 class="mt-5 max-w-3xl font-heading text-5xl font-extrabold leading-[1.02] text-fg md:text-7xl">
+          <span class="bg-gradient-cta bg-clip-text text-transparent">Pega a Visão.</span>
+        </h1>
+        <p class="mt-6 max-w-2xl font-body text-lg text-mute md:text-xl">Organize sua vida financeira e o seu CNPJ com quem fala a sua língua. Sem economês, sem robô, sem julgamento.</p>
+        <p class="mt-6 max-w-xl font-human text-base text-support">Clareza para decidir. Estrutura para crescer.</p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-accent text-ink hover:-translate-y-0.5 hover:shadow-glow-yellow shadow-vision-soft px-8 py-4 text-base">Pega a visão com o nosso diagnóstico gratuito!</a>
+          <a href="#pilares" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 border border-edge-light bg-transparent text-fg hover:border-primary hover:text-primary-light px-8 py-4 text-base">Conhecer a Visão</a>
+        </div>
+        <p class="mt-6 font-human text-sm text-dim">Primeira reunião gratuita · 100% online · em todo o Brasil</p>
+      </div>
+    </section>
+
+    <!-- PAINS -->
+    <section id="dores" class="relative py-20 sm:py-24 md:py-28 bg-canvas text-fg overflow-hidden">
+      <svg viewBox="0 0 600 600" aria-hidden class="pointer-events-none absolute -right-40 top-10 h-[520px] w-[520px] opacity-30">
+        <defs><radialGradient id="orb-p1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--primary-light)" stop-opacity="0.55"></stop><stop offset="100%" stop-color="var(--primary-light)" stop-opacity="0"></stop></radialGradient></defs>
+        <g fill="none" stroke="var(--primary-light)" stroke-width="0.8" opacity="0.55" transform="rotate(-12 300 300)"><ellipse cx="300" cy="300" rx="280" ry="120"></ellipse><ellipse cx="300" cy="300" rx="220" ry="92" opacity="0.7"></ellipse><ellipse cx="300" cy="300" rx="160" ry="66" opacity="0.5"></ellipse><ellipse cx="300" cy="300" rx="100" ry="42" opacity="0.35"></ellipse></g>
+        <circle cx="300" cy="300" r="220" fill="url(#orb-p1)" opacity="0.45"></circle>
+      </svg>
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div class="relative max-w-3xl">
+          <p class="font-heading text-xs uppercase tracking-[0.3em] text-primary-300">Talvez você se identifique</p>
+          <h2 class="mt-4 font-heading text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl text-fg">A gente conhece esse roteiro — e sabe como sair dele.</h2>
+          <p class="mt-5 font-body text-mute md:text-lg">Se uma dessas frases é sua, você não está sozinho. Boa parte dos nossos clientes começou exatamente daí.</p>
+        </div>
+        <div class="relative mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div data-reveal data-reveal-delay="0"><div class="h-full rounded-2xl border border-edge-light bg-card p-6 transition hover:-translate-y-1 hover:border-primary hover:bg-card-hover"><span class="block font-heading text-xs uppercase tracking-widest text-primary-300">#01</span><p class="mt-3 font-human text-base text-fg">Eu ganho dinheiro, mas no fim do mês ele simplesmente some.</p></div></div>
+          <div data-reveal data-reveal-delay="0.04"><div class="h-full rounded-2xl border border-edge-light bg-card p-6 transition hover:-translate-y-1 hover:border-primary hover:bg-card-hover"><span class="block font-heading text-xs uppercase tracking-widest text-primary-300">#02</span><p class="mt-3 font-human text-base text-fg">Meu dinheiro pessoal e o da empresa viraram uma coisa só.</p></div></div>
+          <div data-reveal data-reveal-delay="0.08"><div class="h-full rounded-2xl border border-edge-light bg-card p-6 transition hover:-translate-y-1 hover:border-primary hover:bg-card-hover"><span class="block font-heading text-xs uppercase tracking-widest text-primary-300">#03</span><p class="mt-3 font-human text-base text-fg">Eu deixo o Imposto de Renda pra última hora porque tenho medo de fazer errado.</p></div></div>
+          <div data-reveal data-reveal-delay="0.12"><div class="h-full rounded-2xl border border-edge-light bg-card p-6 transition hover:-translate-y-1 hover:border-primary hover:bg-card-hover"><span class="block font-heading text-xs uppercase tracking-widest text-primary-300">#04</span><p class="mt-3 font-human text-base text-fg">Sou MEI, acumulei boleto do DAS e tô com uma dívida enorme (e do nada).</p></div></div>
+          <div data-reveal data-reveal-delay="0.16"><div class="h-full rounded-2xl border border-edge-light bg-card p-6 transition hover:-translate-y-1 hover:border-primary hover:bg-card-hover"><span class="block font-heading text-xs uppercase tracking-widest text-primary-300">#05</span><p class="mt-3 font-human text-base text-fg">Quero começar a investir, mas parece que todo mundo entende disso menos eu.</p></div></div>
+          <div data-reveal data-reveal-delay="0.2"><div class="h-full rounded-2xl border border-edge-light bg-card p-6 transition hover:-translate-y-1 hover:border-primary hover:bg-card-hover"><span class="block font-heading text-xs uppercase tracking-widest text-primary-300">#06</span><p class="mt-3 font-human text-base text-fg">Tenho vontade de investir, mas morro de medo de perder dinheiro.</p></div></div>
+          <div data-reveal data-reveal-delay="0.24"><div class="h-full rounded-2xl border border-edge-light bg-card p-6 transition hover:-translate-y-1 hover:border-primary hover:bg-card-hover"><span class="block font-heading text-xs uppercase tracking-widest text-primary-300">#07</span><p class="mt-3 font-human text-base text-fg">Eu sei que precisava me organizar… mas nunca consigo.</p></div></div>
+          <div data-reveal data-reveal-delay="0.28"><div class="h-full rounded-2xl border border-edge-light bg-card p-6 transition hover:-translate-y-1 hover:border-primary hover:bg-card-hover"><span class="block font-heading text-xs uppercase tracking-widest text-primary-300">#08</span><p class="mt-3 font-human text-base text-fg">Toda vez que me organizo, um gasto não previsto bagunça tudo de novo.</p></div></div>
+          <div data-reveal data-reveal-delay="0.32"><div class="h-full rounded-2xl border border-edge-light bg-card p-6 transition hover:-translate-y-1 hover:border-primary hover:bg-card-hover"><span class="block font-heading text-xs uppercase tracking-widest text-primary-300">#09</span><p class="mt-3 font-human text-base text-fg">Tento me organizar, mas nunca sei por onde começar.</p></div></div>
+        </div>
+        <div data-reveal class="relative mt-12 flex flex-wrap items-center gap-4">
+          <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-accent text-ink hover:-translate-y-0.5 hover:shadow-glow-yellow shadow-vision-soft px-6 py-3 text-sm">Quero sair desse roteiro</a>
+          <span class="font-human text-sm text-dim">Diagnóstico gratuito em 5 perguntas.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section id="pilares" class="relative py-20 sm:py-24 md:py-28 bg-section text-ink theme-light">
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div class="max-w-2xl">
+          <p class="font-heading text-xs uppercase tracking-[0.3em] text-primary-300">Como a gente trabalha</p>
+          <h2 class="mt-4 font-heading text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">Três pilares que sustentam toda a metodologia da Visão.</h2>
+          <p class="mt-5 font-body text-ink/70 md:text-lg">A gente não vende serviço — vende <em class="text-primary-700">alívio mental</em>. Vem da junção de clareza, estrutura e acompanhamento humano.</p>
+        </div>
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <div data-reveal>
+            <article class="h-full rounded-3xl p-8 shadow-vision-soft transition hover:-translate-y-1 bg-primary-100">
+              <svg viewBox="0 0 80 80" class="h-14 w-14" aria-hidden>
+                <circle cx="40" cy="40" r="30" fill="none" stroke="var(--vision-purple-500)" stroke-width="1.5" stroke-dasharray="2 6"></circle>
+                <circle cx="40" cy="40" r="20" fill="none" stroke="var(--vision-purple-500)" stroke-width="1.5" stroke-dasharray="2 4"></circle>
+                <circle cx="40" cy="40" r="6" fill="var(--vision-purple-500)"></circle>
+              </svg>
+              <h3 class="mt-6 font-heading text-2xl font-bold text-primary-700">Clareza Financeira</h3>
+              <p class="mt-3 font-body text-ink/80">Organização, planejamento e decisões conscientes.</p>
+              <ul class="mt-6 flex flex-wrap gap-2">
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-primary-700">Organização</li>
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-primary-700">Comportamento</li>
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-primary-700">Investimentos</li>
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-primary-700">Metas</li>
+              </ul>
+            </article>
+          </div>
+          <div data-reveal data-reveal-delay="0.08">
+            <article class="h-full rounded-3xl p-8 shadow-vision-soft transition hover:-translate-y-1 bg-secondary-100">
+              <svg viewBox="0 0 80 80" class="h-14 w-14" aria-hidden>
+                <rect x="12" y="12" width="24" height="24" rx="8" fill="var(--vision-blue-500)" opacity="0.4"></rect>
+                <rect x="44" y="12" width="24" height="24" rx="8" fill="var(--vision-blue-500)"></rect>
+                <rect x="12" y="44" width="24" height="24" rx="8" fill="var(--vision-blue-500)"></rect>
+                <rect x="44" y="44" width="24" height="24" rx="8" fill="var(--vision-blue-500)" opacity="0.4"></rect>
+              </svg>
+              <h3 class="mt-6 font-heading text-2xl font-bold text-secondary-700">Estrutura Sem Complicação</h3>
+              <p class="mt-3 font-body text-ink/80">Desburocratização e segurança no que parece complicado — de forma simples.</p>
+              <ul class="mt-6 flex flex-wrap gap-2">
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-secondary-700">MEI / ME</li>
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-secondary-700">IRPF</li>
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-secondary-700">Nota fiscal</li>
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-secondary-700">Regularização</li>
+              </ul>
+            </article>
+          </div>
+          <div data-reveal data-reveal-delay="0.16">
+            <article class="h-full rounded-3xl p-8 shadow-vision-soft transition hover:-translate-y-1 bg-support-200">
+              <svg viewBox="0 0 80 80" class="h-14 w-14" aria-hidden>
+                <circle cx="26" cy="40" r="16" fill="var(--vision-green-600)" opacity="0.5"></circle>
+                <circle cx="54" cy="40" r="16" fill="var(--vision-green-600)"></circle>
+                <line x1="26" y1="40" x2="54" y2="40" stroke="var(--vision-dark-900)" stroke-width="1.5"></line>
+              </svg>
+              <h3 class="mt-6 font-heading text-2xl font-bold text-support-800">Acompanhamento Humano</h3>
+              <p class="mt-3 font-body text-ink/80">Presença, proximidade e suporte real. Você não enfrenta sozinho.</p>
+              <ul class="mt-6 flex flex-wrap gap-2">
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-support-800">Consultor real</li>
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-support-800">Suporte contínuo</li>
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-support-800">Sem robô</li>
+                <li class="rounded-full px-3 py-1 text-xs font-medium bg-white/70 text-support-800">Sem IA</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <div data-reveal class="mt-14 flex flex-wrap items-center gap-4">
+          <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-primary text-white hover:-translate-y-0.5 hover:shadow-glow-purple shadow-vision-soft px-6 py-3 text-sm">Quero esse alívio mental</a>
+          <span class="font-human text-sm text-ink/65">Começa pelo diagnóstico — sem custo, sem cadastro.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOUNDERS -->
+    <section id="socios" class="relative py-20 sm:py-24 md:py-28 bg-soft text-fg">
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div class="max-w-2xl">
+          <p class="font-heading text-xs uppercase tracking-[0.3em] text-primary-300">Quem está por trás</p>
+          <h2 class="mt-4 font-heading text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl text-fg">Dois fundadores, duas formações que se completam.</h2>
+        </div>
+        <div class="mx-auto mt-12 grid gap-6 md:grid-cols-2 lg:max-w-4xl">
+          <div data-reveal>
+            <article class="group flex h-full flex-col overflow-hidden rounded-3xl border border-edge-light bg-card transition hover:border-primary hover:bg-card-hover">
+              <div class="relative aspect-square w-full overflow-hidden bg-gradient-to-b from-primary/30 via-primary/10 to-transparent">
+                <img src="assets/img/felipe.jpeg" alt="Felipe Guimarães" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div class="flex flex-1 flex-col gap-2 p-5">
+                <div>
+                  <h3 class="font-heading text-xl font-bold text-fg">Felipe Guimarães</h3>
+                  <p class="mt-1 text-xs text-dim">Sócio fundador · Economista</p>
+                </div>
+                <p class="font-body text-sm text-mute leading-relaxed">Economista formado pela UFSJ, com passagem pelo mestrado em Economia Aplicada na UFJF e mais de 6 anos de experiência. Desenvolveu uma metodologia que integra economia comportamental à prática financeira.</p>
+              </div>
+            </article>
+          </div>
+          <div data-reveal data-reveal-delay="0.1">
+            <article class="group flex h-full flex-col overflow-hidden rounded-3xl border border-edge-light bg-card transition hover:border-primary hover:bg-card-hover">
+              <div class="relative aspect-square w-full overflow-hidden bg-gradient-to-b from-secondary/30 via-secondary/10 to-transparent">
+                <img src="assets/img/sabrina.jpeg" alt="Sabrina Azevedo" class="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]" />
+              </div>
+              <div class="flex flex-1 flex-col gap-2 p-5">
+                <div>
+                  <h3 class="font-heading text-xl font-bold text-fg">Sabrina Azevedo</h3>
+                  <p class="mt-1 text-xs text-dim">Sócia fundadora · Produtora cultural e empresária</p>
+                </div>
+                <p class="font-body text-sm text-mute leading-relaxed">Produtora cultural e empresária, atuando na construção de conexões estratégicas entre marcas, clientes e parceiros. Na Visão, desenvolve o relacionamento institucional e fortalece a comunicação da empresa com o público, unindo criatividade, articulação e sensibilidade.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div data-reveal class="mt-12 flex flex-wrap items-center gap-4">
+          <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-accent text-ink hover:-translate-y-0.5 hover:shadow-glow-yellow shadow-vision-soft px-6 py-3 text-sm">Falar com a Visão</a>
+          <span class="font-human text-sm text-dim">Primeira conversa é gratuita e 100% online.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ CTA -->
+    <section id="quiz" class="relative py-20 sm:py-24 md:py-28 bg-canvas text-fg">
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div class="relative overflow-hidden rounded-[2.5rem] bg-gradient-hero p-10 shadow-vision-card sm:p-14">
+          <svg viewBox="0 0 600 600" aria-hidden class="pointer-events-none absolute -right-32 -top-32 h-[420px] w-[420px] opacity-50">
+            <defs><radialGradient id="orb-q1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--support)" stop-opacity="0.55"></stop><stop offset="100%" stop-color="var(--support)" stop-opacity="0"></stop></radialGradient></defs>
+            <g fill="none" stroke="var(--support)" stroke-width="0.8" opacity="0.55" transform="rotate(-12 300 300)"><ellipse cx="300" cy="300" rx="280" ry="120"></ellipse><ellipse cx="300" cy="300" rx="220" ry="92" opacity="0.7"></ellipse><ellipse cx="300" cy="300" rx="160" ry="66" opacity="0.5"></ellipse><ellipse cx="300" cy="300" rx="100" ry="42" opacity="0.35"></ellipse></g>
+            <circle cx="300" cy="300" r="220" fill="url(#orb-q1)" opacity="0.45"></circle>
+          </svg>
+          <svg viewBox="0 0 600 600" aria-hidden class="pointer-events-none absolute -bottom-40 -left-32 h-[420px] w-[420px] opacity-30">
+            <defs><radialGradient id="orb-q2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--accent)" stop-opacity="0.55"></stop><stop offset="100%" stop-color="var(--accent)" stop-opacity="0"></stop></radialGradient></defs>
+            <g fill="none" stroke="var(--accent)" stroke-width="0.8" opacity="0.55" transform="rotate(-12 300 300)"><ellipse cx="300" cy="300" rx="280" ry="120"></ellipse><ellipse cx="300" cy="300" rx="220" ry="92" opacity="0.7"></ellipse><ellipse cx="300" cy="300" rx="160" ry="66" opacity="0.5"></ellipse><ellipse cx="300" cy="300" rx="100" ry="42" opacity="0.35"></ellipse></g>
+            <circle cx="300" cy="300" r="220" fill="url(#orb-q2)" opacity="0.45"></circle>
+          </svg>
+          <div class="relative max-w-2xl">
+            <p class="font-heading text-xs uppercase tracking-[0.32em] text-support">Diagnóstico gratuito</p>
+            <h2 class="mt-4 font-heading text-3xl font-extrabold leading-tight text-fg sm:text-4xl md:text-5xl">Antes de qualquer estratégia, a gente precisa entender sua realidade.</h2>
+            <p class="mt-5 font-body text-mute md:text-lg">Descubra qual é seu perfil financeiro hoje — e entenda qual próximo passo faz mais sentido pra sua realidade. 5 perguntas, 3 minutos.</p>
+            <div class="mt-8 flex flex-wrap items-center gap-3">
+              <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-accent text-ink hover:-translate-y-0.5 hover:shadow-glow-yellow shadow-vision-soft px-8 py-4 text-base">Pegue sua Visão em 5 perguntas</a>
+              <span class="font-human text-sm text-dim">Sem cadastro pra começar.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOCIAL PROOF -->
+    <section id="resultados" class="relative py-20 sm:py-24 md:py-28 bg-section text-ink theme-light">
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div class="grid gap-12 md:grid-cols-[1fr_2fr] md:items-end">
+          <div>
+            <p class="font-heading text-xs uppercase tracking-[0.3em] text-primary-300">Resultados reais</p>
+            <h2 class="mt-4 font-heading text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">De clientes que pegaram a visão.</h2>
+          </div>
+          <div class="grid grid-cols-2 gap-4 text-center md:text-left">
+            <div data-reveal>
+              <div class="rounded-2xl bg-primary p-6 text-white shadow-vision-soft">
+                <p class="font-heading text-4xl font-extrabold">70+</p>
+                <p class="mt-1 font-human text-sm text-white/85">clientes atendidos</p>
+              </div>
+            </div>
+            <div data-reveal data-reveal-delay="0.08">
+              <div class="rounded-2xl bg-support-300 p-6 text-ink shadow-vision-soft">
+                <p class="font-heading text-4xl font-extrabold">100%</p>
+                <p class="mt-1 font-human text-sm text-ink/75">online, todo o Brasil</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-12 grid gap-4 md:grid-cols-2">
+          <div data-reveal data-reveal-delay="0"><article class="h-full rounded-3xl border border-primary-200 bg-white p-8 transition hover:-translate-y-1 hover:border-primary hover:shadow-vision-soft"><p class="font-heading text-lg font-bold text-ink">De endividada → 7x os gastos mensais aplicados</p><p class="mt-3 font-body text-ink/75 leading-relaxed">Começou com dívidas e sem emprego, precisou de empréstimo de R$6.000 para se organizar. Depois dos primeiros meses, nunca mais precisou de empréstimo e o padrão de vida subiu.</p></article></div>
+          <div data-reveal data-reveal-delay="0.06"><article class="h-full rounded-3xl border border-primary-200 bg-white p-8 transition hover:-translate-y-1 hover:border-primary hover:shadow-vision-soft"><p class="font-heading text-lg font-bold text-ink">Do R$0 → R$5.000 aplicados em poucos meses</p><p class="mt-3 font-body text-ink/75 leading-relaxed">Saiu das dívidas, recuperou crédito com o banco, mudou de estado e construiu o primeiro patrimônio financeiro.</p></article></div>
+          <div data-reveal data-reveal-delay="0.12"><article class="h-full rounded-3xl border border-primary-200 bg-white p-8 transition hover:-translate-y-1 hover:border-primary hover:shadow-vision-soft"><p class="font-heading text-lg font-bold text-ink">Quitou todos os empréstimos</p><p class="mt-3 font-body text-ink/75 leading-relaxed">Cliente ficou meses sem receber e contraiu vários empréstimos. Reorganizou-se na consultoria e hoje está livre de dívidas.</p></article></div>
+          <div data-reveal data-reveal-delay="0.18"><article class="h-full rounded-3xl border border-primary-200 bg-white p-8 transition hover:-translate-y-1 hover:border-primary hover:shadow-vision-soft"><p class="font-heading text-lg font-bold text-ink">Saiu do looping do cartão → quase R$20k investidos</p><p class="mt-3 font-body text-ink/75 leading-relaxed">Cliente PJ pagava todo o salário no cartão. Com a consultoria avançada, em um ano passou a pagar tudo com sobra e adquiriu bens de alto custo.</p></article></div>
+        </div>
+        <p class="mt-10 font-human text-sm text-ink/55">Os nomes dos clientes são preservados por LGPD. Casos reais, autorizações em coleta.</p>
+        <div data-reveal class="mt-10 flex flex-wrap items-center gap-4">
+          <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-primary text-white hover:-translate-y-0.5 hover:shadow-glow-purple shadow-vision-soft px-6 py-3 text-sm">Quero meu resultado também</a>
+          <span class="font-human text-sm text-ink/65">Descubra seu perfil em menos de 2 minutos.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFFERENTIALS -->
+    <section id="diferenciais" class="relative py-20 sm:py-24 md:py-28 bg-canvas text-fg">
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div class="max-w-2xl">
+          <p class="font-heading text-xs uppercase tracking-[0.3em] text-primary-300">Por que a Visão?</p>
+          <h2 class="mt-4 font-heading text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl text-fg">O que a gente faz diferente.</h2>
+          <p class="mt-5 font-body text-mute md:text-lg">A maioria das consultorias fala sobre dinheiro. A gente fala sobre comportamento, rotina e a vida real que acontece em volta dele.</p>
+        </div>
+        <div class="mt-12 grid gap-5 md:grid-cols-2">
+          <div data-reveal data-reveal-delay="0"><article class="group relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-edge-light bg-card p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-vision-card sm:p-7"><span aria-hidden class="pointer-events-none absolute right-6 top-5 font-heading text-xs font-bold tracking-widest text-dim/40">01</span><p class="pr-10 font-heading text-base font-semibold leading-snug text-fg sm:text-lg">Você é tratado como pessoa, não como número</p><div class="relative mt-auto grid grid-cols-2 items-stretch gap-2"><div class="relative overflow-hidden rounded-2xl border border-support/30 bg-gradient-to-br from-support/15 via-support/5 to-transparent p-4"><div class="flex items-center gap-1.5"><svg viewBox="0 0 16 16" class="h-3.5 w-3.5 text-support" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M3 8.5l3.5 3.5L13 5"></path></svg><p class="font-heading text-[10px] font-semibold uppercase tracking-wider text-support">Na Visão</p></div><p class="mt-2 font-heading text-base font-bold leading-snug text-fg">Sempre.</p></div><div class="relative rounded-2xl border border-edge-light/50 bg-canvas/40 p-4"><div class="flex items-center gap-1.5"><svg viewBox="0 0 16 16" class="h-3.5 w-3.5 text-dim" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M3.5 8h9"></path></svg><p class="font-heading text-[10px] font-semibold uppercase tracking-wider text-dim">Em geral</p></div><p class="mt-2 font-body text-sm leading-snug text-mute">Raramente.</p></div><span aria-hidden class="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-edge-light bg-canvas px-2 py-0.5 font-heading text-[9px] font-bold uppercase tracking-wider text-dim shadow-vision-soft">vs</span></div></article></div>
+          <div data-reveal data-reveal-delay="0.05"><article class="group relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-edge-light bg-card p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-vision-card sm:p-7"><span aria-hidden class="pointer-events-none absolute right-6 top-5 font-heading text-xs font-bold tracking-widest text-dim/40">02</span><p class="pr-10 font-heading text-base font-semibold leading-snug text-fg sm:text-lg">Consultor humano em todas as interações</p><div class="relative mt-auto grid grid-cols-2 items-stretch gap-2"><div class="relative overflow-hidden rounded-2xl border border-support/30 bg-gradient-to-br from-support/15 via-support/5 to-transparent p-4"><div class="flex items-center gap-1.5"><svg viewBox="0 0 16 16" class="h-3.5 w-3.5 text-support" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M3 8.5l3.5 3.5L13 5"></path></svg><p class="font-heading text-[10px] font-semibold uppercase tracking-wider text-support">Na Visão</p></div><p class="mt-2 font-heading text-base font-bold leading-snug text-fg">Sempre.</p></div><div class="relative rounded-2xl border border-edge-light/50 bg-canvas/40 p-4"><div class="flex items-center gap-1.5"><svg viewBox="0 0 16 16" class="h-3.5 w-3.5 text-dim" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M3.5 8h9"></path></svg><p class="font-heading text-[10px] font-semibold uppercase tracking-wider text-dim">Em geral</p></div><p class="mt-2 font-body text-sm leading-snug text-mute">Na maioria, é robô.</p></div><span aria-hidden class="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-edge-light bg-canvas px-2 py-0.5 font-heading text-[9px] font-bold uppercase tracking-wider text-dim shadow-vision-soft">vs</span></div></article></div>
+          <div data-reveal data-reveal-delay="0.1"><article class="group relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-edge-light bg-card p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-vision-card sm:p-7"><span aria-hidden class="pointer-events-none absolute right-6 top-5 font-heading text-xs font-bold tracking-widest text-dim/40">03</span><p class="pr-10 font-heading text-base font-semibold leading-snug text-fg sm:text-lg">Finanças pessoais + contabilidade integradas</p><div class="relative mt-auto grid grid-cols-2 items-stretch gap-2"><div class="relative overflow-hidden rounded-2xl border border-support/30 bg-gradient-to-br from-support/15 via-support/5 to-transparent p-4"><div class="flex items-center gap-1.5"><svg viewBox="0 0 16 16" class="h-3.5 w-3.5 text-support" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M3 8.5l3.5 3.5L13 5"></path></svg><p class="font-heading text-[10px] font-semibold uppercase tracking-wider text-support">Na Visão</p></div><p class="mt-2 font-heading text-base font-bold leading-snug text-fg">Única no mercado.</p></div><div class="relative rounded-2xl border border-edge-light/50 bg-canvas/40 p-4"><div class="flex items-center gap-1.5"><svg viewBox="0 0 16 16" class="h-3.5 w-3.5 text-dim" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M3.5 8h9"></path></svg><p class="font-heading text-[10px] font-semibold uppercase tracking-wider text-dim">Em geral</p></div><p class="mt-2 font-body text-sm leading-snug text-mute">Não há.</p></div><span aria-hidden class="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-edge-light bg-canvas px-2 py-0.5 font-heading text-[9px] font-bold uppercase tracking-wider text-dim shadow-vision-soft">vs</span></div></article></div>
+          <div data-reveal data-reveal-delay="0.15"><article class="group relative flex h-full flex-col gap-5 overflow-hidden rounded-3xl border border-edge-light bg-card p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-vision-card sm:p-7"><span aria-hidden class="pointer-events-none absolute right-6 top-5 font-heading text-xs font-bold tracking-widest text-dim/40">04</span><p class="pr-10 font-heading text-base font-semibold leading-snug text-fg sm:text-lg">Linguagem acessível e didática. Você ciente de cada etapa do processo.</p><div class="relative mt-auto grid grid-cols-2 items-stretch gap-2"><div class="relative overflow-hidden rounded-2xl border border-support/30 bg-gradient-to-br from-support/15 via-support/5 to-transparent p-4"><div class="flex items-center gap-1.5"><svg viewBox="0 0 16 16" class="h-3.5 w-3.5 text-support" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M3 8.5l3.5 3.5L13 5"></path></svg><p class="font-heading text-[10px] font-semibold uppercase tracking-wider text-support">Na Visão</p></div><p class="mt-2 font-heading text-base font-bold leading-snug text-fg">Sempre.</p></div><div class="relative rounded-2xl border border-edge-light/50 bg-canvas/40 p-4"><div class="flex items-center gap-1.5"><svg viewBox="0 0 16 16" class="h-3.5 w-3.5 text-dim" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden><path d="M3.5 8h9"></path></svg><p class="font-heading text-[10px] font-semibold uppercase tracking-wider text-dim">Em geral</p></div><p class="mt-2 font-body text-sm leading-snug text-mute">Quase nunca.</p></div><span aria-hidden class="pointer-events-none absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 rounded-full border border-edge-light bg-canvas px-2 py-0.5 font-heading text-[9px] font-bold uppercase tracking-wider text-dim shadow-vision-soft">vs</span></div></article></div>
+        </div>
+        <div data-reveal class="mt-14 rounded-3xl border border-primary/30 bg-gradient-card p-8 shadow-vision-soft sm:p-10">
+          <p class="font-body text-lg leading-relaxed text-fg sm:text-xl">Em resumo, a Visão não fala só de dinheiro. A gente fala da vida real que acontece em volta dele. Sem julgamento, sem pressão, sem linguagem complicada. Por isso, acreditamos que você não precisa virar outra pessoa pra organizar sua vida financeira — porque com Visão, você transforma confusão em clareza.</p>
+          <p class="mt-6 font-heading text-2xl font-extrabold text-accent sm:text-3xl">Menos Confusão. Mais Visão.</p>
+        </div>
+        <div data-reveal class="mt-12 flex flex-wrap items-center gap-4">
+          <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-accent text-ink hover:-translate-y-0.5 hover:shadow-glow-yellow shadow-vision-soft px-6 py-3 text-sm">Comece pelo diagnóstico!</a>
+          <span class="font-human text-sm text-dim">5 perguntas, resultado na hora.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CASHBACK -->
+    <section id="cashback" class="relative py-20 sm:py-24 md:py-28 bg-canvas text-fg">
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div class="grid gap-12 md:grid-cols-[1fr_1.4fr] md:items-center">
+          <div>
+            <p class="font-heading text-xs uppercase tracking-[0.3em] text-primary-300">Cashback por indicação</p>
+            <h2 class="mt-4 font-heading text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl text-fg">Indicou, ganhou. De verdade.</h2>
+            <p class="mt-5 font-body text-mute md:text-lg">Nosso programa de indicação devolve em real (ou em meses grátis) o valor que você gerou em novos clientes. Sem letrinhas miúdas.</p>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div data-reveal>
+              <article class="h-full rounded-3xl border border-primary/40 bg-gradient-card p-8 shadow-vision-soft">
+                <p class="font-heading text-xs uppercase tracking-widest text-primary-200">Plano mensal</p>
+                <p class="mt-4 font-body text-fg leading-relaxed">Cada cliente vindo por sua indicação te dá 1 mês de consultoria grátis (ou R$ 265 de desconto se você for da Mentoria Avançada).</p>
+                <p class="mt-4 font-human text-sm text-dim">Até 6 meses acumulados — depois o ciclo reinicia.</p>
+              </article>
+            </div>
+            <div data-reveal data-reveal-delay="0.08">
+              <article class="h-full rounded-3xl bg-support p-8 text-ink shadow-vision-soft">
+                <p class="font-heading text-xs uppercase tracking-widest text-support-900">Plano semestral</p>
+                <p class="mt-4 font-body leading-relaxed">Cashback de R$ 265 por indicação fechada, pago via Pix no dia 20 do mês seguinte.</p>
+                <p class="mt-4 font-human text-sm text-ink/70">Até 6 indicações por ciclo — até R$ 1.590 no mês.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div data-reveal class="mt-12 flex flex-wrap items-center gap-4">
+          <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-accent text-ink hover:-translate-y-0.5 hover:shadow-glow-yellow shadow-vision-soft px-6 py-3 text-sm">Quero entrar pra Visão</a>
+          <span class="font-human text-sm text-dim">Diagnóstico gratuito antes de qualquer plano.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="relative py-20 sm:py-24 md:py-28 bg-section text-ink theme-light">
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div class="max-w-2xl">
+          <p class="font-heading text-xs uppercase tracking-[0.3em] text-primary-300">Dúvidas frequentes</p>
+          <h2 class="mt-4 font-heading text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl">O que a gente mais escuta antes do diagnóstico.</h2>
+        </div>
+        <div class="mt-12 divide-y divide-primary-200 overflow-hidden rounded-3xl border border-primary-200 bg-white shadow-vision-soft">
+          <button type="button" data-faq aria-expanded="true" class="block w-full text-left"><div class="flex items-center justify-between gap-6 px-6 py-5 sm:px-8 sm:py-6"><span class="font-heading text-base font-semibold text-ink sm:text-lg">Quanto custa uma consultoria?</span><span data-faq-icon data-base-class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition" class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition bg-primary text-white shadow-glow-purple" aria-hidden>−</span></div><div class="faq-panel open"><div><p class="px-6 pb-6 font-body text-ink/75 sm:px-8 sm:pb-8">Consultoria Básica: R$ 265/mês. Mentoria Avançada: R$ 415/mês. Contabilidade: a partir de R$ 350/mês. A primeira reunião é sempre gratuita.</p></div></div></button>
+          <button type="button" data-faq aria-expanded="false" class="block w-full text-left"><div class="flex items-center justify-between gap-6 px-6 py-5 sm:px-8 sm:py-6"><span class="font-heading text-base font-semibold text-ink sm:text-lg">É 100% online? Atendem em todo o Brasil?</span><span data-faq-icon data-base-class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition" class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition bg-primary-100 text-primary-700" aria-hidden>+</span></div><div class="faq-panel"><div><p class="px-6 pb-6 font-body text-ink/75 sm:px-8 sm:pb-8">Sim — atendemos todo o Brasil via Google Meet e WhatsApp, no horário comercial (10h às 19h).</p></div></div></button>
+          <button type="button" data-faq aria-expanded="false" class="block w-full text-left"><div class="flex items-center justify-between gap-6 px-6 py-5 sm:px-8 sm:py-6"><span class="font-heading text-base font-semibold text-ink sm:text-lg">Vocês usam robô ou IA pra atender?</span><span data-faq-icon data-base-class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition" class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition bg-primary-100 text-primary-700" aria-hidden>+</span></div><div class="faq-panel"><div><p class="px-6 pb-6 font-body text-ink/75 sm:px-8 sm:pb-8">Não. Toda interação é com um consultor humano. Esse é um dos nossos princípios.</p></div></div></button>
+          <button type="button" data-faq aria-expanded="false" class="block w-full text-left"><div class="flex items-center justify-between gap-6 px-6 py-5 sm:px-8 sm:py-6"><span class="font-heading text-base font-semibold text-ink sm:text-lg">Posso cancelar quando quiser?</span><span data-faq-icon data-base-class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition" class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition bg-primary-100 text-primary-700" aria-hidden>+</span></div><div class="faq-panel"><div><p class="px-6 pb-6 font-body text-ink/75 sm:px-8 sm:pb-8">Pode. Não trabalhamos com multa ou fidelidade no plano mensal. O semestral tem condição especial em troca do compromisso de 6 meses.</p></div></div></button>
+          <button type="button" data-faq aria-expanded="false" class="block w-full text-left"><div class="flex items-center justify-between gap-6 px-6 py-5 sm:px-8 sm:py-6"><span class="font-heading text-base font-semibold text-ink sm:text-lg">Como funciona o cashback por indicação?</span><span data-faq-icon data-base-class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition" class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition bg-primary-100 text-primary-700" aria-hidden>+</span></div><div class="faq-panel"><div><p class="px-6 pb-6 font-body text-ink/75 sm:px-8 sm:pb-8">No plano mensal você ganha 1 mês grátis por indicação (até 6). No semestral o cashback é em Pix de R$ 265 por indicação (até 6 por ciclo).</p></div></div></button>
+          <button type="button" data-faq aria-expanded="false" class="block w-full text-left"><div class="flex items-center justify-between gap-6 px-6 py-5 sm:px-8 sm:py-6"><span class="font-heading text-base font-semibold text-ink sm:text-lg">Vocês fazem a Declaração de IRPF?</span><span data-faq-icon data-base-class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition" class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition bg-primary-100 text-primary-700" aria-hidden>+</span></div><div class="faq-panel"><div><p class="px-6 pb-6 font-body text-ink/75 sm:px-8 sm:pb-8">Sim — tanto avulsa quanto integrada à consultoria.</p></div></div></button>
+          <button type="button" data-faq aria-expanded="false" class="block w-full text-left"><div class="flex items-center justify-between gap-6 px-6 py-5 sm:px-8 sm:py-6"><span class="font-heading text-base font-semibold text-ink sm:text-lg">Sou MEI e estou irregular. Vocês resolvem?</span><span data-faq-icon data-base-class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition" class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition bg-primary-100 text-primary-700" aria-hidden>+</span></div><div class="faq-panel"><div><p class="px-6 pb-6 font-body text-ink/75 sm:px-8 sm:pb-8">Resolvemos. Regularizamos a situação, organizamos o DAS atrasado e te ajudamos a não cair nessa armadilha de novo.</p></div></div></button>
+          <button type="button" data-faq aria-expanded="false" class="block w-full text-left"><div class="flex items-center justify-between gap-6 px-6 py-5 sm:px-8 sm:py-6"><span class="font-heading text-base font-semibold text-ink sm:text-lg">Em quanto tempo eu vejo resultado?</span><span data-faq-icon data-base-class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition" class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition bg-primary-100 text-primary-700" aria-hidden>+</span></div><div class="faq-panel"><div><p class="px-6 pb-6 font-body text-ink/75 sm:px-8 sm:pb-8">A maioria dos nossos clientes sente diferença real nos primeiros 3 meses. Mas o resultado depende de você manter o método com a gente.</p></div></div></button>
+        </div>
+        <div data-reveal class="mt-12 flex flex-wrap items-center gap-4">
+          <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-primary text-white hover:-translate-y-0.5 hover:shadow-glow-purple shadow-vision-soft px-6 py-3 text-sm">Pronto, quero meu diagnóstico</a>
+          <span class="font-human text-sm text-ink/65">Sem cadastro pra começar. Resultado direto no e-mail.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="relative pb-16 pt-12 bg-canvas text-fg">
+      <div class="mx-auto w-full max-w-6xl px-5 sm:px-8">
+        <div class="relative overflow-hidden rounded-[2.5rem] bg-gradient-cta p-10 text-center text-ink sm:p-16">
+          <svg viewBox="0 0 600 600" aria-hidden class="pointer-events-none absolute -left-28 -top-28 h-[420px] w-[420px] opacity-40">
+            <defs><radialGradient id="orb-f1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="var(--primary-light)" stop-opacity="0.55"></stop><stop offset="100%" stop-color="var(--primary-light)" stop-opacity="0"></stop></radialGradient></defs>
+            <g fill="none" stroke="var(--primary-light)" stroke-width="0.8" opacity="0.55" transform="rotate(-12 300 300)"><ellipse cx="300" cy="300" rx="280" ry="120"></ellipse><ellipse cx="300" cy="300" rx="220" ry="92" opacity="0.7"></ellipse><ellipse cx="300" cy="300" rx="160" ry="66" opacity="0.5"></ellipse><ellipse cx="300" cy="300" rx="100" ry="42" opacity="0.35"></ellipse></g>
+            <circle cx="300" cy="300" r="220" fill="url(#orb-f1)" opacity="0.45"></circle>
+          </svg>
+          <svg viewBox="0 0 400 200" aria-hidden class="pointer-events-none absolute left-1/2 top-6 h-24 w-[420px] -translate-x-1/2 opacity-50">
+            <path d="M 20 180 Q 200 -40 380 180" fill="none" stroke="var(--primary-light)" stroke-width="1.2" stroke-linecap="round" opacity="0.7"></path>
+            <path d="M 60 180 Q 200 -10 340 180" fill="none" stroke="var(--primary-light)" stroke-width="0.8" stroke-linecap="round" opacity="0.45"></path>
+            <path d="M 100 180 Q 200 20 300 180" fill="none" stroke="var(--primary-light)" stroke-width="0.6" stroke-linecap="round" opacity="0.25"></path>
+          </svg>
+          <div class="relative">
+            <p class="font-slogan text-3xl text-primary-800">Pega a Visão!</p>
+            <h2 class="mt-4 font-heading text-4xl font-extrabold leading-tight md:text-5xl">Pronto pra pegar a visão?</h2>
+            <p class="mt-4 font-body text-ink/80 md:text-lg">Comece pelo diagnóstico — leva 3 minutos.</p>
+            <div class="mt-8">
+              <a href="quiz.html" class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-primary text-white hover:-translate-y-0.5 hover:shadow-glow-purple shadow-vision-soft px-8 py-4 text-base">Quero meu diagnóstico gratuito</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-edge-light/60 bg-soft py-14 text-sm text-mute">
+    <div class="mx-auto w-full max-w-6xl px-5 sm:px-8 flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
+      <div class="max-w-xs space-y-3">
+        <div class="flex items-center"><img src="assets/img/logo.png" alt="Visão" class="h-12 w-auto select-none" /></div>
+        <p class="font-human text-dim">Clareza para decidir. Estrutura para crescer.</p>
+        <p class="font-slogan text-2xl text-support">Pega a Visão!</p>
+      </div>
+      <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+        <div class="space-y-2">
+          <p class="font-heading text-xs uppercase tracking-widest text-dim">Contato</p>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="https://wa.me/5521997079059" target="_blank" rel="noopener noreferrer" class="transition hover:text-fg">WhatsApp</a>
+            <a href="mailto:contato.visaobr@gmail.com" class="transition hover:text-fg">contato.visaobr@gmail.com</a>
+            <span class="text-dim">10h às 19h</span>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <p class="font-heading text-xs uppercase tracking-widest text-dim">Redes</p>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="https://instagram.com/visao_oficial" target="_blank" rel="noopener noreferrer" class="transition hover:text-fg">Instagram</a>
+            <a href="https://www.youtube.com/@Visãooficial" target="_blank" rel="noopener noreferrer" class="transition hover:text-fg">YouTube</a>
+          </div>
+        </div>
+        <div class="space-y-2">
+          <p class="font-heading text-xs uppercase tracking-widest text-dim">Legal</p>
+          <div class="flex flex-col gap-2 text-sm">
+            <a href="politica-privacidade.html" class="transition hover:text-fg">Política de privacidade</a>
+            <span class="text-dim">CNPJ 54.589.204/0001-39</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mx-auto w-full max-w-6xl px-5 sm:px-8 mt-12 border-t border-edge-light/40 pt-6 text-xs text-dim">© <span data-year></span> Azevedo Guimarães Produções LTDA. Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="hidden fixed inset-x-4 bottom-4 z-50 mx-auto max-w-3xl translate-y-24 opacity-0 transition-all duration-300" role="dialog" aria-live="polite">
+    <div class="flex flex-col gap-4 rounded-2xl border border-edge-light bg-card/95 p-5 shadow-vision-card backdrop-blur sm:flex-row sm:items-center sm:justify-between sm:p-6">
+      <p class="font-body text-sm text-mute sm:text-base">A gente usa cookies para entender o que funciona na página. <a href="politica-privacidade.html" class="text-support hover:text-accent">Política de Privacidade</a>.</p>
+      <div class="flex shrink-0 gap-2">
+        <button data-cookie-reject class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-transparent text-fg hover:bg-card px-4 py-2 text-sm">Recusar</button>
+        <button data-cookie-accept class="inline-flex items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 bg-accent text-ink hover:-translate-y-0.5 hover:shadow-glow-yellow shadow-vision-soft px-4 py-2 text-sm">Aceitar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
