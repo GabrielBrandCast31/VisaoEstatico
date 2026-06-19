@@ -374,6 +374,24 @@
     );
   }
 
+  // jsPDF é pesado (~350 KB) e só é necessário ao gerar/baixar o PDF.
+  // Carregamos sob demanda para não pesar no carregamento inicial (mobile).
+  const JSPDF_URL = "https://unpkg.com/jspdf@2.5.2/dist/jspdf.umd.min.js";
+  let jspdfPromise = null;
+  function ensureJsPDF() {
+    if (window.jspdf && window.jspdf.jsPDF) return Promise.resolve();
+    if (jspdfPromise) return jspdfPromise;
+    jspdfPromise = new Promise(function (resolve, reject) {
+      const s = document.createElement("script");
+      s.src = JSPDF_URL;
+      s.async = true;
+      s.onload = function () { resolve(); };
+      s.onerror = function () { reject(new Error("Falha ao carregar o gerador de PDF.")); };
+      document.head.appendChild(s);
+    });
+    return jspdfPromise;
+  }
+
   function generateDiagnosisPdf(input) {
     const jsPDF = window.jspdf.jsPDF;
     const doc = new jsPDF({ unit: "mm", format: "a4", orientation: "portrait" });
@@ -396,13 +414,17 @@
   }
 
   VISAO.downloadDiagnosisPdf = function (input) {
-    const doc = generateDiagnosisPdf(input);
-    doc.save("diagnostico-visao-" + input.profile.id + ".pdf");
+    return ensureJsPDF().then(function () {
+      const doc = generateDiagnosisPdf(input);
+      doc.save("diagnostico-visao-" + input.profile.id + ".pdf");
+    });
   };
 
   VISAO.diagnosisPdfBase64 = function (input) {
-    const doc = generateDiagnosisPdf(input);
-    const dataUri = doc.output("datauristring");
-    return Promise.resolve(dataUri.split(",")[1] || "");
+    return ensureJsPDF().then(function () {
+      const doc = generateDiagnosisPdf(input);
+      const dataUri = doc.output("datauristring");
+      return dataUri.split(",")[1] || "";
+    });
   };
 })();

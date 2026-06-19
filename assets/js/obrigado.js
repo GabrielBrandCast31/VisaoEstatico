@@ -82,7 +82,7 @@
   const imageBlock = profile.image
     ? '<div class="mx-auto mt-8 w-full max-w-sm overflow-hidden rounded-3xl border border-white/15 bg-white/[0.06] shadow-vision-card">' +
       '<img src="' + esc(profile.image) + '" alt="Classificação: ' + esc(profile.name) +
-      '" width="1080" height="1080" class="h-auto w-full select-none">' +
+      '" width="760" height="760" decoding="async" class="h-auto w-full select-none">' +
       "</div>"
     : "";
 

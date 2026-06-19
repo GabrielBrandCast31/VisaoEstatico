@@ -36,12 +36,39 @@ Edite `assets/js/config.js` (equivale às variáveis `NEXT_PUBLIC_*` do `.env`):
 
 ## Dependências externas (via CDN)
 
-- **Tailwind CSS** (`cdn.tailwindcss.com`) — config da marca em `assets/js/tw-config.js`.
-- **Google Fonts** — Poppins, Inter, Nunito, Caveat, Anton.
-- **jsPDF** (`unpkg`) — geração do PDF do diagnóstico (só em quiz/obrigado).
+- **Google Fonts** — Poppins, Inter, Nunito, Caveat.
+- **jsPDF** (`unpkg`) — carregado **sob demanda** (só ao gerar/baixar o PDF).
 
-Requer internet em runtime para essas três. Tudo o mais (lógica do quiz,
-classificação, perfis, geração de PDF) roda local em `assets/js/`.
+O CSS do Tailwind agora é **pré-compilado** (`assets/css/tailwind.build.css`,
+~24 KB / ~5 KB gzip) — não usa mais o CDN em runtime. Tudo o mais (lógica do
+quiz, classificação, perfis, geração de PDF) roda local em `assets/js/`.
+
+## Performance / mobile
+
+Otimizações aplicadas:
+
+- **Tailwind pré-compilado e purgado** no lugar do Play CDN (que baixava
+  ~115 KB gzip de JS e compilava o CSS no navegador a cada visita, com flash
+  de tela sem estilo). Agora é um CSS estático de ~5 KB gzip.
+- **jsPDF lazy** — só baixa ao clicar em gerar/baixar o diagnóstico.
+- **Imagens otimizadas** — ilustrações de classificação de ~340–404 KB (PNG
+  1080px) para ~104–116 KB (JPEG 760px); fotos dos fundadores recomprimidas.
+  Imagens abaixo da dobra com `loading="lazy"` + `decoding="async"`.
+- **Fontes enxutas** — removidas a família Anton (não usada) e o peso 700 da
+  Caveat.
+
+### Como recompilar o CSS
+
+Sempre que adicionar/alterar classes Tailwind no HTML ou JS, regere o CSS
+**a partir desta pasta** (`static/`):
+
+```bash
+npx tailwindcss@3.4.15 -c tailwind.config.cjs -i input.css \
+  -o assets/css/tailwind.build.css --minify
+```
+
+> `tailwind.config.cjs` (cores/fontes da marca) e `input.css` ficam aqui na
+> pasta só para o build — não são carregados pelas páginas em runtime.
 
 ## Onde fica a lógica
 

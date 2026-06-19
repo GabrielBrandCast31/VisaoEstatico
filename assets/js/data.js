@@ -95,7 +95,7 @@
       recommendation_pitch:
         "Uma metodologia pensada por nós para ajudar você a **encontrar o seu alívio mental** através de **organização** financeira, de forma **prática** e **humana**.",
       accent_color: "#8350F2",
-      image: "assets/img/classificacao/consumidor_calorico.png",
+      image: "assets/img/classificacao/consumidor_calorico.jpg",
     },
     equilibrista_da_rotina: {
       id: "equilibrista_da_rotina",
@@ -125,7 +125,7 @@
       recommendation_pitch:
         "Uma mentoria pensada por nós para ajudar você a **encontrar o seu equilíbrio** através de **estrutura** financeira, de forma **estratégica** e **humana**.",
       accent_color: "#859EF6",
-      image: "assets/img/classificacao/equilibrista_da_rotina.png",
+      image: "assets/img/classificacao/equilibrista_da_rotina.jpg",
     },
     empreendedor_modo_aviao: {
       id: "empreendedor_modo_aviao",
@@ -155,7 +155,7 @@
       recommendation_pitch:
         "Uma combinação pensada por nós para tirar você do **modo avião** através de **estrutura** contábil, de forma **prática** e **humana**.",
       accent_color: "#C0F685",
-      image: "assets/img/classificacao/empreendedor_modo_aviao.png",
+      image: "assets/img/classificacao/empreendedor_modo_aviao.jpg",
     },
     investidor_de_reels: {
       id: "investidor_de_reels",
@@ -185,7 +185,7 @@
       recommendation_pitch:
         "Uma mentoria pensada por nós para transformar informação em **direção prática** através de **estratégia** financeira, de forma **personalizada** e **humana**.",
       accent_color: "#F2E850",
-      image: "assets/img/classificacao/investidor_de_reels.png",
+      image: "assets/img/classificacao/investidor_de_reels.jpg",
     },
   };
 
