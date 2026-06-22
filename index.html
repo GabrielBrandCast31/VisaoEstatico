@@ -14,10 +14,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat&family=Inter:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" /></noscript>
 
   <link rel="stylesheet" href="assets/css/tailwind.build.css" />
-  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body class="font-body">
 
@@ -25,7 +26,7 @@
   <header class="sticky top-0 z-40 border-b border-edge-light/60 bg-canvas/80 backdrop-blur-xl">
     <div class="mx-auto w-full max-w-6xl px-5 sm:px-8 flex h-16 items-center justify-between">
       <a href="index.html" class="flex items-center">
-        <img src="assets/img/logo.png" alt="Visão" class="h-9 w-auto select-none" />
+        <img src="assets/img/logo.png" alt="Visão" width="160" height="137" class="h-9 w-auto select-none" />
       </a>
       <nav class="hidden gap-8 text-sm text-mute md:flex">
         <a href="#pilares" class="transition hover:text-fg">Abordagem</a>
@@ -392,7 +393,7 @@
   <footer class="border-t border-edge-light/60 bg-soft py-14 text-sm text-mute">
     <div class="mx-auto w-full max-w-6xl px-5 sm:px-8 flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
       <div class="max-w-xs space-y-3">
-        <div class="flex items-center"><img src="assets/img/logo.png" alt="Visão" loading="lazy" decoding="async" class="h-12 w-auto select-none" /></div>
+        <div class="flex items-center"><img src="assets/img/logo.png" alt="Visão" width="160" height="137" loading="lazy" decoding="async" class="h-12 w-auto select-none" /></div>
         <p class="font-human text-dim">Clareza para decidir. Estrutura para crescer.</p>
         <p class="font-slogan text-2xl text-support">Pega a Visão!</p>
       </div>

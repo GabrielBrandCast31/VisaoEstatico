@@ -49,13 +49,27 @@ Otimizações aplicadas:
 
 - **Tailwind pré-compilado e purgado** no lugar do Play CDN (que baixava
   ~115 KB gzip de JS e compilava o CSS no navegador a cada visita, com flash
-  de tela sem estilo). Agora é um CSS estático de ~5 KB gzip.
+  de tela sem estilo). Agora é um CSS estático de ~6 KB gzip.
+- **Um único CSS** — os tokens/base/helpers (antigo `styles.css`) foram
+  embutidos no `tailwind.build.css` via `input.css`, eliminando um request
+  que bloqueava a renderização.
+- **Fontes não-bloqueantes** — carregadas com `media="print" onload` (+
+  `preload`), então não atrasam a primeira pintura (com `display=swap`).
 - **jsPDF lazy** — só baixa ao clicar em gerar/baixar o diagnóstico.
 - **Imagens otimizadas** — ilustrações de classificação de ~340–404 KB (PNG
-  1080px) para ~104–116 KB (JPEG 760px); fotos dos fundadores recomprimidas.
+  1080px) para ~104–116 KB (JPEG 760px); `logo.png` de 487×417/36 KB para
+  160×137/16 KB (era exibido a ~74px); fotos dos fundadores recomprimidas.
   Imagens abaixo da dobra com `loading="lazy"` + `decoding="async"`.
 - **Fontes enxutas** — removidas a família Anton (não usada) e o peso 700 da
   Caveat.
+- **Media query mobile (`<=767px`)** em `input.css` — esconde as decorações
+  (orbitais/arcos em SVG), desliga `backdrop-blur` (caro na GPU) e reduz o
+  respiro vertical das seções, cortando custo de paint no celular.
+
+> **Cache (item "ciclos de vida de cache" do Lighthouse):** o TTL de 10 min é
+> definido pelo **GitHub Pages** e não é configurável em site estático. Para
+> cache longo, sirva por um CDN/host com controle de `Cache-Control`
+> (Cloudflare Pages, Netlify, etc.).
 
 ### Como recompilar o CSS
 
@@ -78,4 +92,6 @@ npx tailwindcss@3.4.15 -c tailwind.config.cjs -i input.css \
 - `assets/js/pdf.js` — PDF do diagnóstico (porte de `lib/pdf.ts`).
 - `assets/js/submit.js` — envio do lead ao webhook.
 - `assets/js/main.js` — reveal on scroll, FAQ, cookie banner, analytics.
+- `input.css` — fonte do CSS (Tailwind + tokens/base/helpers + media query
+  mobile); gera `assets/css/tailwind.build.css` no build.
 - `assets/css/styles.css` — tokens de cor da marca + helpers.
