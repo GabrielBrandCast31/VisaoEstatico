@@ -78,7 +78,7 @@
       (opts.optional ? '<span class="text-dim">opcional</span>' : "") +
       "</span>" +
       inner +
-      '<span class="mt-1 hidden text-sm text-error" data-error="' + name + '"></span>' +
+      '<span class="mt-1 hidden text-sm text-error" data-error="' + name + '" role="alert" aria-live="polite"></span>' +
       "</label>"
     );
   }
@@ -117,7 +117,7 @@
       "<span>Concordo com o tratamento dos meus dados pela Visão para receber o diagnóstico e contato comercial, conforme a " +
       '<a href="politica-privacidade.html" class="text-support hover:text-accent" target="_blank">Política de Privacidade</a>.</span>' +
       "</label>" +
-      '<span class="hidden text-sm text-error" data-error="lgpd_consent"></span>' +
+      '<span class="hidden text-sm text-error" data-error="lgpd_consent" role="alert" aria-live="polite"></span>' +
       '<button type="submit" id="lead-submit" class="inline-flex w-full items-center justify-center gap-2 rounded-pill font-heading font-semibold transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50 bg-accent text-ink hover:-translate-y-0.5 hover:shadow-glow-yellow shadow-vision-soft px-8 py-4 text-base">' +
       (submitting ? "Enviando…" : "Receber meu diagnóstico") +
       "</button>" +
@@ -209,11 +209,16 @@
     if (!el) return;
     el.textContent = msg;
     el.classList.remove("hidden");
+    const input = root.querySelector('[name="' + name + '"]');
+    if (input) input.setAttribute("aria-invalid", "true");
   }
   function clearFieldErrors() {
     root.querySelectorAll("[data-error]").forEach(function (el) {
       el.textContent = "";
       el.classList.add("hidden");
+    });
+    root.querySelectorAll("[aria-invalid]").forEach(function (input) {
+      input.removeAttribute("aria-invalid");
     });
   }
 
