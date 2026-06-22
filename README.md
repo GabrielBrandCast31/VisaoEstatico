@@ -61,14 +61,26 @@ Otimizações aplicadas:
   classificação de ~340–404 KB (PNG) para ~44–52 KB (WebP). O `logo.png`
   permanece só como favicon. Imagens abaixo da dobra com `loading="lazy"` +
   `decoding="async"`.
-- **Acessibilidade** — corrigido o contraste das seções claras (eyebrows
-  passaram de `primary-300` para `primary-700`; textos `text-ink` de baixa
-  opacidade subiram para `/70`).
 - **Fontes enxutas** — removidas a família Anton (não usada) e o peso 700 da
   Caveat.
 - **Media query mobile (`<=767px`)** em `input.css` — esconde as decorações
-  (orbitais/arcos em SVG), desliga `backdrop-blur` (caro na GPU) e reduz o
-  respiro vertical das seções, cortando custo de paint no celular.
+  (orbitais/arcos em SVG), desliga `backdrop-blur` (caro na GPU), reduz o
+  respiro vertical das seções e aplica **`content-visibility: auto`** nas
+  seções abaixo da dobra (o navegador pula o layout/paint do que está fora da
+  tela). Tudo isso só no celular — o desktop não muda.
+
+## Acessibilidade
+
+- **Skip link** "Pular para o conteúdo" (visível ao focar via teclado) em
+  todas as páginas, apontando para `<main id="conteudo">`.
+- **Landmarks/rótulos** — `<nav aria-label>`, links do logo com `aria-label`.
+- **Contraste (AA)** — eyebrows das seções claras de `primary-300` →
+  `primary-700`; textos `text-ink` de baixa opacidade → `/70`; legenda de
+  estatística para branco sólido.
+- **FAQ** — botões com `aria-controls` ligando ao painel (além de
+  `aria-expanded`).
+- **Formulário do quiz** — mensagens de erro com `role="alert"` +
+  `aria-live="polite"` e `aria-invalid` nos campos inválidos.
 
 > **Cache (item "ciclos de vida de cache" do Lighthouse):** o TTL de 10 min é
 > definido pelo **GitHub Pages** e não é configurável em site estático. Para

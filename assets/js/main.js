@@ -30,7 +30,13 @@
   // ---- FAQ accordion ----------------------------------------------------
   function initFaq() {
     const items = document.querySelectorAll("[data-faq]");
-    items.forEach(function (btn) {
+    items.forEach(function (btn, idx) {
+      // Acessibilidade: liga cada botão ao painel que ele controla.
+      var initPanel = btn.querySelector(".faq-panel");
+      if (initPanel) {
+        if (!initPanel.id) initPanel.id = "faq-panel-" + idx;
+        btn.setAttribute("aria-controls", initPanel.id);
+      }
       btn.addEventListener("click", function () {
         const panel = btn.querySelector(".faq-panel");
         const icon = btn.querySelector("[data-faq-icon]");

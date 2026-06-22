@@ -211,6 +211,9 @@ body {
      custam paint/CPU no celular: removidas em telas pequenas.
    - Desliga o backdrop-blur (caro na GPU mobile).
    - Reduz o respiro vertical das seções.
+   - content-visibility: o navegador pula a renderização (layout/paint) das
+     seções fora da tela até o usuário rolar até elas — corta o trabalho de
+     renderização inicial no celular. O hero (1ª seção) fica de fora.
    ============================================================ */
 @media (max-width: 767px) {
   svg.pointer-events-none.absolute { display: none !important; }
@@ -220,4 +223,9 @@ body {
   .backdrop-blur { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
 
   .py-20, .py-24, .py-28 { padding-top: 3.5rem; padding-bottom: 3.5rem; }
+
+  main > section:nth-of-type(n + 2) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 700px;
+  }
 }
