@@ -39,9 +39,10 @@ Edite `assets/js/config.js` (equivale às variáveis `NEXT_PUBLIC_*` do `.env`):
 - **Google Fonts** — Poppins, Inter, Nunito, Caveat.
 - **jsPDF** (`unpkg`) — carregado **sob demanda** (só ao gerar/baixar o PDF).
 
-O CSS do Tailwind agora é **pré-compilado** (`assets/css/tailwind.build.css`,
-~24 KB / ~5 KB gzip) — não usa mais o CDN em runtime. Tudo o mais (lógica do
-quiz, classificação, perfis, geração de PDF) roda local em `assets/js/`.
+O CSS do Tailwind é **pré-compilado** e depois **embutido inline** no `<head>`
+de cada página (zero request de CSS bloqueando a renderização). Tudo o mais
+(lógica do quiz, classificação, perfis, geração de PDF) roda local em
+`assets/js/`.
 
 ## Performance / mobile
 
@@ -50,16 +51,19 @@ Otimizações aplicadas:
 - **Tailwind pré-compilado e purgado** no lugar do Play CDN (que baixava
   ~115 KB gzip de JS e compilava o CSS no navegador a cada visita, com flash
   de tela sem estilo). Agora é um CSS estático de ~6 KB gzip.
-- **Um único CSS** — os tokens/base/helpers (antigo `styles.css`) foram
-  embutidos no `tailwind.build.css` via `input.css`, eliminando um request
-  que bloqueava a renderização.
+- **CSS inline e crítico** — o `tailwind.build.css` é injetado dentro de
+  `<style id="visao-css">` em cada página (via `build-inline.py`), eliminando
+  o request de CSS que bloqueava a primeira pintura (melhora FCP/LCP).
 - **Fontes não-bloqueantes** — carregadas com `media="print" onload` (+
   `preload`), então não atrasam a primeira pintura (com `display=swap`).
 - **jsPDF lazy** — só baixa ao clicar em gerar/baixar o diagnóstico.
-- **Imagens otimizadas** — ilustrações de classificação de ~340–404 KB (PNG
-  1080px) para ~104–116 KB (JPEG 760px); `logo.png` de 487×417/36 KB para
-  160×137/16 KB (era exibido a ~74px); fotos dos fundadores recomprimidas.
-  Imagens abaixo da dobra com `loading="lazy"` + `decoding="async"`.
+- **Imagens em WebP** — `logo` 16→8 KB, fundadores ~48→16 KB, ilustrações de
+  classificação de ~340–404 KB (PNG) para ~44–52 KB (WebP). O `logo.png`
+  permanece só como favicon. Imagens abaixo da dobra com `loading="lazy"` +
+  `decoding="async"`.
+- **Acessibilidade** — corrigido o contraste das seções claras (eyebrows
+  passaram de `primary-300` para `primary-700`; textos `text-ink` de baixa
+  opacidade subiram para `/70`).
 - **Fontes enxutas** — removidas a família Anton (não usada) e o peso 700 da
   Caveat.
 - **Media query mobile (`<=767px`)** em `input.css` — esconde as decorações
@@ -73,16 +77,27 @@ Otimizações aplicadas:
 
 ### Como recompilar o CSS
 
-Sempre que adicionar/alterar classes Tailwind no HTML ou JS, regere o CSS
-**a partir desta pasta** (`static/`):
+Sempre que adicionar/alterar classes Tailwind no HTML ou JS, regere o CSS e
+re-injete inline **a partir desta pasta** (`static/`):
 
 ```bash
 npx tailwindcss@3.4.15 -c tailwind.config.cjs -i input.css \
   -o assets/css/tailwind.build.css --minify
+python3 build-inline.py
 ```
 
-> `tailwind.config.cjs` (cores/fontes da marca) e `input.css` ficam aqui na
-> pasta só para o build — não são carregados pelas páginas em runtime.
+> `tailwind.config.cjs`, `input.css` e `build-inline.py` ficam aqui só para o
+> build — não são carregados pelas páginas em runtime.
+
+### Regenerar imagens WebP
+
+Requer `sharp` (Node). A partir de `assets/img/`:
+
+```bash
+npx -p sharp node -e "require('sharp')('logo.png').webp({quality:88}).toFile('logo.webp')"
+```
+
+(o mesmo para fundadores e `classificacao/*`, com `quality:80`).
 
 ## Onde fica a lógica
 
